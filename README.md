@@ -27,8 +27,15 @@ Aquí tienes un ejemplo básico de cómo usar iModal:
 ```javascript
 // Inicializar iModal
 const modal = new iModal();
+const modal = new iModal();
+modal.title = "Title";
+modal.actionUri = "url_controller";
+modal.dataToSend = {param1: param1};
+await modal.show();
+```
+Otro ejemplo usando async y encapsulando en una funcion:
 
-// Abrir un modal
+```javascript
 async function shoContent(param = null)
 {
 	let url_site = "https://itivos.com"; // your domain
@@ -41,7 +48,7 @@ async function shoContent(param = null)
 		eventShow.dataToSend = {param: param}; // If your needd send parametters to controller
 		await eventShow.show();
 	} catch (error) {
-		console.error("General error: " + error);
+		console.error("Error: " + error);
 	}	
 } 
 ```
