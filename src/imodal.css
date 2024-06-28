@@ -1,0 +1,446 @@
+/** iModal **/
+:root {
+  --primary-color-imodal: #222;
+  --secondary-color-imodal: #222;
+  --spinner-color-one-imodal: rgba(21 67 202 / 30%);
+  --spinner-color-two-imodal: rgba(21 67 202 / 10%);
+}
+
+.imodal-spinner {
+  border: 4px solid var(--spinner-color-one-imodal);
+  border-radius: 50%;
+  border-top: 4px solid var(--spinner-color-two-imodal);
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: calc(50% - 20px);
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.modal-preview .modal-content {
+  display: block !important;
+  min-height: 80%;
+  max-height: initial;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 50px;
+}
+
+/* Efecto de izquierda a derecha */
+.modal-instance.slide-left-to-right {
+  animation: slideFromLeft 0.5s ease;
+}
+
+/* Efecto de derecha a izquierda */
+.modal-instance.slide-right-to-left {
+  animation: slideFromRight 0.5s ease;
+}
+
+/* Efecto de abajo hacia arriba */
+.modal-instance.slide-bottom-to-top {
+  animation: slideFromBottom 0.5s ease;
+}
+
+/* Efecto de arriba hacia abajo */
+.modal-instance.slide-top-to-bottom {
+  animation: slideFromTop 0.5s ease;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Efecto de cierre de izquierda a derecha */
+.modal-instance.slide-out-left-to-right {
+  animation: slideOutLeftToRight 0.5s ease;
+}
+
+@keyframes slideOutLeftToRight {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Efecto de cierre de derecha a izquierda */
+.modal-instance.slide-out-right-to-left {
+  animation: slideOutRightToLeft 0.5s ease;
+}
+
+@keyframes slideOutRightToLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Efecto de cierre de abajo hacia arriba */
+.modal-instance.slide-out-bottom-to-top {
+  animation: slideOutBottomToTop 0.5s ease;
+}
+
+@keyframes slideOutBottomToTop {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* Efecto de cierre de arriba hacia abajo */
+.modal-instance.slide-out-top-to-bottom {
+  animation: slideOutTopToBottom 0.5s ease;
+}
+
+@keyframes slideOutTopToBottom {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.clearNavConfirm {
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.48);
+  position: absolute;
+  top: 0;
+  z-index: 98;
+}
+
+.modal-transparent {
+  background-color: initial !important;
+}
+
+.clearDivMore {
+  background: #00000052;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  display: none;
+}
+
+.clearDivConfirm {
+  background: #00000080;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+}
+
+.modal-instance {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal-instance .modal-content {
+  max-height: initial;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.modal-instance.full .modal-content {
+  min-height: 80%;
+}
+
+.modal-instance .modal-header h3 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.modal-instance .modal-header h3 span {
+  vertical-align: middle;
+  color: var(--secondary-color-imodal);
+  padding-left: 0px;
+}
+
+.modal-instance .modal-header h3 i {
+  vertical-align: middle;
+  color: var(--primary-color-imodal);
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  margin-left: 15px;
+}
+
+.modal-instance .modal-header {
+  max-width: initial;
+  background-color: white;
+  border-bottom: solid 1px #1111;
+}
+
+.close-modal-efect {
+  background-color: #f7f7f7;
+  border-radius: 20px;
+}
+
+.show-apply-filters-button-content {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  background: white;
+  width: 100%;
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: solid 1px #1111;
+}
+
+.theme_white {
+  background-color: white !important;
+  color: black;
+}
+
+.theme_dark {
+  background-color: #222 !important;
+  color: white;
+}
+
+.confirm {
+  position: absolute;
+  top: 50%;
+  /* Ajusta según tus necesidades */
+  left: 50%;
+  /* Ajusta según tus necesidades */
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  /* Ajusta el valor del z-index según sea necesario para estar por encima de otros elementos */
+  background-color: white;
+  /* Ajusta según tus necesidades */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Ajusta según tus necesidades */
+  max-width: 280px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.confirm .modal-header {
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  font-weight: bold;
+  border-bottom: none;
+  position: relative;
+  height: initial;
+  margin: 0px;
+  margin-top: 20px;
+}
+
+.confirm .modal-content {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #a5a5a5;
+}
+
+.confirm .modal-footer {
+  height: initial;
+  margin-top: 25px
+}
+
+.confirm .modal-footer ul {
+  margin: 0px;
+  padding: 0px;
+  border-bottom: solid 1p #111;
+  list-style: none;
+}
+
+.confirm .modal-footer ul li {
+  text-align: center;
+  border-top: solid 1px #1111;
+}
+
+.confirm .modal-footer ul li span {
+  color: #428bca;
+}
+
+.confirm .modal-footer ul li a,
+.confirm .modal-footer ul li span {
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.confirm .modal-footer ul li a {
+  float: initial;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.confirm .cancell {}
+
+.confirm .modal {
+  margin-top: 20%;
+}
+
+.modal-instance ul.list {
+  margin-top: initial !important;
+  margin-bottom: initial !important;
+}
+
+.modal-instance ul.list {
+  margin: 0px;
+  padding: 0px;
+  background: white;
+  border-radius: 2px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.modal-instance ul.list li.title {
+  padding-right: 10px !important;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.modal-instance ul.list li {
+  transition: background-color 0.4s ease;
+  user-select: none;
+  display: block;
+  position: relative;
+  padding: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 20px;
+  border-bottom: solid 1px #1111;
+}
+
+.modal-instance ul.list li span {
+  text-decoration: none;
+  cursor: pointer;
+  color: #222;
+  user-select: none;
+}
+
+.modal-instance ul.list li span:not(.right) {
+  display: block;
+  /* Solo se aplica a los span sin la clase .right */
+}
+
+.modal-instance ul.list li:not(.title) span:not(.right)::after,
+.modal-instance ul.list li:not(.title) a:after {
+  font-family: 'Material Icons';
+  content: "\e5e1";
+  position: absolute;
+  right: 5px;
+  color: #535050;
+}
+
+.modal-instance ul.list li a {
+  text-decoration: none;
+  color: #222;
+  display: block;
+  user-select: none;
+}
+
+.modal-instance ul.list li:not(.title):active {
+  background-color: var(--color-bg-touch);
+}
+
+.modal-instance ul.list li a.show_all {
+  text-decoration: none;
+  color: #365aa2;
+}
+
+.modal-instance ul.list li a span.right {
+  color: #7b7b7b;
+  display: inline;
+  /* Ajusta según tus necesidades específicas para .right */
+}
+
+.modal-instance ul.list li a span:not(.right) {
+  display: initial;
+  /* O el valor que desees, como 'inline', 'inline-block', etc. */
+}
+
+.modal-instance .modal-content .button {
+  display: block;
+  width: 100%;
+  margin: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.imodal-scroll-disabled {
+  position: fixed;
+  overflow-y: hidden;
+}
