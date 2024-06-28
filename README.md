@@ -15,16 +15,16 @@ iModal es una librería de JavaScript que permite crear y gestionar modales de m
 
 Puedes incluirlo directamente en tu proyecto con un script tag:
 
-\`\`\`html
+```html
 <link rel="stylesheet" href="path/to/imodal.min.css">
 <script src="path/to/imodal.min.js"></script>
-\`\`\`
+```
 
 ## Uso
 
 Aquí tienes un ejemplo básico de cómo usar iModal:
 
-\`\`\`javascript
+```javascript
 // Inicializar iModal
 const modal = new iModal();
 
@@ -44,14 +44,14 @@ async function shoContent(param = null)
 		console.error("General error: " + error);
 	}	
 } 
-\`\`\`
+```
 
 ## Opciones
 
-- \`title\`: Título del modal.
-- \`actionUri\`: Url de solicitud.
-- \`dataToSend\`: Array con los datos a enviar para procesar (Si es necesario)
-- \`show\`: Mostrar el modal
+- `title`: Título del modal.
+- `actionUri`: Url de solicitud.
+- `dataToSend`: Array con los datos a enviar para procesar (Si es necesario)
+- `show`: Mostrar el modal
 
 ## Compatibilidad
 
@@ -69,7 +69,7 @@ iModal es compatible con los siguientes navegadores:
 
 ## Licencia
 
-Este proyecto está licenciado bajo la licencia MIT con una cláusula de atribución. Consulta el archivo \`LICENSE\` para más detalles.
+Este proyecto está licenciado bajo la licencia MIT con una cláusula de atribución. Consulta el archivo `LICENSE` para más detalles.
 
 MIT License
 
