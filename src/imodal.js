@@ -128,21 +128,6 @@ class iModal {
         const handleCatchError = async () => {
           this.html = await ajaxRequest(this.actionUri, this.dataToSend, this.method);
 
-          /*
-          // Verificar si la respuesta es JSON
-          var jsonResponse;
-
-          try {
-            jsonResponse = JSON.parse(this.html);
-            if (jsonResponse.code === 'session_no_logged') {
-              var url_site = $("#url_site").val();
-              var lang = $("#language").val();
-              window.location.replace(url_site + lang + "/module/itivos_viaticos/home");
-              return;
-            }
-          } catch (parseError) {
-          }
-          */
           $modalInstance.html(this.html);
           $modalInstance.find('.modal-content').fadeIn('fast');
 
