@@ -27,7 +27,6 @@ Aquí tienes un ejemplo básico de cómo usar iModal:
 ```javascript
 // Inicializar iModal
 const modal = new iModal();
-const modal = new iModal();
 modal.title = "Title";
 modal.actionUri = "url_controller";
 modal.dataToSend = {param1: param1};
